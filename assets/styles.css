@@ -3,3 +3,148 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    height: 100vh;
+    background: #f2f8f2;
+}
+
+.featured-section {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    background: #e8f5e8;
+}
+
+.featured-img {
+    grid-column: 2 / 6;
+    grid-row: 3 / 11;
+    max-width: 100%;
+    height: 100%;
+}
+
+.interactive-section {
+    grid-column: 7 / -1;
+    grid-row: 1 / -1;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: white;
+    padding: 0px 40px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.signup-form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.form-group {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    color: #aaa;
+    width: 18px;
+    height: 18px;
+    opacity: 50%;
+}
+
+.input-container input {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 10px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.signup-btn {
+    padding: 12px;
+    background-color: #6e9c6e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #5a8a5a;
+}
+
+.or-divider {
+    text-align: center;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+
+
+@media (max-width: 768px) {
+    .featured-section {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        background: white;
+    }
+
+    .featured-img {
+        grid-column: 3 / 11;
+        grid-row: auto;
+    }
+
+    .interactive-section {
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 80vh;
+    }
+}
